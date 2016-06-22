@@ -83,14 +83,14 @@
                 if (bmi >40) {
                     info = "very severely obese";
                 }
-                output = "Your BMI is <span>"  + bmi + "</span><br />" + 
+                output = "Your BMI is <span>"  + bmi + "</span><br />" +
                                                               "You are <span>"  + info + "</span>.";
             } else {
                 output = "You broke it!";
             };
             return output;
         },
-        
+
         calculateStandard: function (bmi_form) {
             var weight_lbs = bmi_form.find('input[name="bmi_standard_weight_lbs"]').val();
             var height_ft = bmi_form.find('input[name="bmi_standard_height_ft"]').val();
@@ -104,7 +104,7 @@
 
             bmi_form.find('#bmi_standard_calculator_form_result').html(output).fadeIn('slow');
         },
-        
+
         calculateMetric: function (bmi_form) {
             var weight_kg = bmi_form.find('input[name="bmi_metric_weight_kg"]').val();
             var height_cm = bmi_form.find('input[name="bmi_metric_height_cm"]').val();
@@ -118,7 +118,7 @@
 
             bmi_form.find('#bmi_metric_calculator_form_result').html(output).fadeIn('slow');
         },
-        
+
         init: function () {
             var bmi_Standard_Form = $('#form_bmi_standard_calculator');
             bmi_Standard_Form.on('submit', function(e) {
@@ -258,12 +258,12 @@
                 });
             }
         },
-        
+
         /* ---------------------------------------------------------------------- */
         /* ------------------------------ demo switcher    ---------------------- */
         /* ---------------------------------------------------------------------- */
         TM_demoSwitcher: function() {
-            var showSwitcher = true;
+            var showSwitcher = false;
             var $style_switcher = $('#style-switcher');
             if( !$style_switcher.length && showSwitcher ) {
                 $.ajax({
@@ -380,7 +380,7 @@
         /* ----------------------------- Magnific Popup ------------------------- */
         /* ---------------------------------------------------------------------- */
         TM_magnificPopup_lightbox: function() {
-            
+
             $('.image-popup-lightbox').magnificPopup({
                 type: 'image',
                 closeOnContentClick: true,
@@ -464,9 +464,9 @@
                         return element.find('img');
                     }
                 }
-                
+
             });
-            
+
             $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
                 disableOn: 700,
                 type: 'iframe',
@@ -528,7 +528,7 @@
                     }
                 });
             }
-            
+
             $('.popup-with-form').magnificPopup({
                 type: 'inline',
                 preloader: false,
@@ -635,7 +635,7 @@
                 hook: 'data-rel',
                 animation_speed:'normal',
                 theme:'light_square',
-                slideshow:3000, 
+                slideshow:3000,
                 autoplay_slideshow: false,
                 social_tools: false
             });
@@ -823,7 +823,7 @@
                 e.preventDefault();
 
                 var $anchor = $(this);
-                
+
                 var $hearder_top = $('.header .header-nav');
                 var hearder_top_offset = 0;
                 if ($hearder_top[0]){
@@ -912,7 +912,7 @@
                 indicatorFirstLevel: "",
                 indicatorSecondLevel: "<i class='fa fa-angle-right'></i>"
             });
-            
+
             $("#menuzord-verticalnav").menuzord({
                 align: "right",
                 effect: "slide",
@@ -1094,7 +1094,7 @@
                     var last_child_offset = parseInt(last_child.css('top'), 10);
                     var prev_last_offset  = parseInt(prev_last.css('top'), 10);
                     var offset_icon       = last_child_offset - prev_last_offset;
-                    
+
                     var go_top_to = 0;
                     if(offset_icon){
                         if ( offset_icon <= 87 ){
@@ -1104,7 +1104,7 @@
                             }, 300);
                         }
                     }
-                    
+
                     if( $(this).position().left === 0 ){
                         $(this).removeClass('item-right');
                         $(this).addClass('item-left');
@@ -1115,7 +1115,7 @@
                 });
             }
             timeline_on_left_and_right();
-            
+
             $(window).resize(function() {
                 timeline_on_left_and_right();
             });
@@ -1140,7 +1140,7 @@
                     filter: "*"
                 });
             });
-            
+
             //isotope filter
             $(document.body).on('click', portfolio_filter, function(e) {
                 $(portfolio_filter).removeClass("active");
@@ -1154,7 +1154,7 @@
                 });
                 return false;
             });
-            
+
             THEMEMASCOT.slider.TM_flexslider();
 
         },
@@ -1212,7 +1212,7 @@
             });
         },
 
-        
+
         /* ---------------------------------------------------------------------- */
         /* ----------------------- pie chart / circle skill bar ----------------- */
         /* ---------------------------------------------------------------------- */
@@ -1244,7 +1244,7 @@
                 }
             });
         },
-        
+
         /* ---------------------------------------------------------------------- */
         /* ------------------- progress bar / horizontal skill bar -------------- */
         /* ---------------------------------------------------------------------- */
@@ -1258,7 +1258,7 @@
                     var barcolor = current_item.data('barcolor');
                     current_item.append('<span class="percent">' + percent + '%' + '</span>').css('background-color', barcolor).css('width', percent + '%').addClass('appeared');
                 }
-                
+
             });
         },
 
@@ -1818,7 +1818,7 @@
                 });
             });
 
-            
+
 
             $(".team-carousel-1col").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -1944,7 +1944,7 @@
                 dots: true,
                 nav: false
             });
-            
+
             $(".gallery-list-carosel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: false,
@@ -2009,7 +2009,7 @@
                         items: 1
                     }
                 }
-            });      
+            });
 
             $(".carousel-2col").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -2075,7 +2075,7 @@
                         items: 3
                     }
                 }
-            });            
+            });
 
             $(".product-details-carousel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
@@ -2208,7 +2208,7 @@
                     }
                 }
             });
-            
+
             $(".clients-logo.carousel").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: true,
@@ -2318,7 +2318,7 @@
                     }
                 });
             });
-            
+
             $(".carousel-slider-four").owlCarousel({
                 rtl: THEMEMASCOT.isRTL.check(),
                 autoplay: true,
@@ -2441,7 +2441,7 @@
         /* ---------------------------------------------------------------------- */
         /* ----------------------------- BxSlider  ------------------------------ */
         /* ---------------------------------------------------------------------- */
-        TM_bxslider: function() {  
+        TM_bxslider: function() {
             $('.bxslider').bxSlider({
                 mode: 'vertical',
                 minSlides: 3,
@@ -2449,7 +2449,7 @@
                 pager: false,
                 prevText: '<i class="fa fa-angle-left"></i>',
                 nextText: '<i class="fa fa-angle-right"></i>'
-            });   
+            });
         },
 
 
@@ -2485,7 +2485,7 @@
     THEMEMASCOT.documentOnLoad = {
 
         init: function() {
-            
+
             var t = setTimeout(function() {
                 THEMEMASCOT.initialize.TM_wow();
                 THEMEMASCOT.widget.TM_twittie();
